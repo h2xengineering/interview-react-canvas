@@ -44,6 +44,7 @@ export default function CanvasDrawingApp() {
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
+    ctx.fillStyle = "#ffffff"
     // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 

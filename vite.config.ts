@@ -8,5 +8,8 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  css: {
+    postcss: './postcss.config.js',
+  },
   plugins: [react()]
 })

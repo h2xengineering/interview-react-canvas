@@ -1,4 +1,8 @@
+
+import './app/globals.css'
+
 import CanvasDrawingApp from "@/components/canvas-drawing-app"
+
 
 export default function Home() {
   return (
