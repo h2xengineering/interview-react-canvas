@@ -36,6 +36,14 @@ export default function CanvasDrawingApp() {
     "#f472b6", // pink
   ]
 
+  // Load a world map image
+  const image = new Image()
+  image.src = "https://upload.wikimedia.org/wikipedia/commons/9/9a/Sample_Floorplan.jpg"
+  image.onload = () => {
+    drawCanvas();
+  }
+
+
   // Draw all shapes on the canvas
   const drawCanvas = () => {
     const canvas = canvasRef.current
@@ -52,6 +60,9 @@ export default function CanvasDrawingApp() {
     ctx.save()
     ctx.translate(offset.x, offset.y)
     ctx.scale(scale, scale)
+
+    // Draw the world map image
+    ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, image.width, image.height)
 
     // Draw shapes
     shapes.forEach((shape) => {
